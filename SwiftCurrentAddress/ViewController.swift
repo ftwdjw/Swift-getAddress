@@ -35,6 +35,9 @@ CLLocationManagerDelegate {
     var data : [String] = []
     let geocoder = CLGeocoder()
     var localText : String = ""
+    var postalCode : String = ""
+    var title1 : [String] = [""]
+    var subTitle1 : [String] = [""]
     
     
     // MARK: - Properties
@@ -92,27 +95,8 @@ CLLocationManagerDelegate {
         self.mapView.setRegion(region, animated: true)
         
         //add annotation
-        if dropPin==true  {
+        if dropPin==true && localText=="" {
             
-            
-            print("place=",localText)
-            annotation.title = self.localText
-            annotation.coordinate = center
-            mapView.addAnnotation(annotation)
-            measurementSave=measurement
-            print("\nadd annotation\n")
-            print("\nmeasurementSaved=\(measurementSave)\n")
-            
-            
-        }
-        if dropPin==false && lastDropPin==true {
-            mapView.removeAnnotations([annotation])
-            print("\nremove annotations\n")
-        }
-        
-        //get location data
-        
-        if measurement>10{
             CLGeocoder().reverseGeocodeLocation(location!, completionHandler: {(placemarks, error) -> Void in
                 print(location)
                 
@@ -123,14 +107,52 @@ CLLocationManagerDelegate {
                 
                 if (placemarks?.count)! > 0 {
                     let pm = placemarks![0]
-                    print("\n\(pm.locality!)\n")
+                    
                     self.localText=pm.locality!
+                    self.postalCode=pm.postalCode!
+                    print("pm=\(pm)")
+                    
+                    print("\nthoroughfare=\(pm.thoroughfare!)\n")
+                    print("\nsubThoroughfare=\(pm.subThoroughfare!)\n")
+                     print("\n locality=\(pm.locality!)\n")
+                     //print("\nsubLocality=\(pm.subLocality!)\n")
+                    print("\nadministrativeArea=\(pm.administrativeArea!)\n")
+                    print("\nsubAdministrativeArea=\(pm.subAdministrativeArea!)\n")
+                    print("\npostalCode=\(pm.postalCode!)\n")
+                    print("\ncountry=\(pm.country!)\n")
+                    print("\nISOcountryCode=\(pm.isoCountryCode!)\n")
+                    self.title1=[ (pm.subThoroughfare!) +  " " + (pm.thoroughfare!)]
+                    self.subTitle1=[ (pm.locality!) +   " , " + (pm.administrativeArea!) + " " ]
+                    self.subTitle1.append(pm.postalCode!)
                 }
                 else {
                     print("Problem with the data received from geocoder")
                 }
             })
+
+           
+            
+            
         }
+        if dropPin==false && lastDropPin==true {
+            mapView.removeAnnotations([annotation])
+            print("\nremove annotations\n")
+        }
+        
+        //get location data
+        
+        if localText != "" {
+            print("place=",localText)
+            annotation.title =  self.title1.joined(separator: " ")
+            annotation.subtitle=self.subTitle1.joined(separator: " ")
+            annotation.coordinate = center
+            mapView.addAnnotation(annotation)
+            measurementSave=measurement
+            print("\nadd annotation\n")
+            print("\nmeasurementSaved=\(measurementSave)\n")
+            
+        }
+        
 
         
         //var location = CLLocation(latitude: latitude, longitude: longitude) //changed!!!
