@@ -19,6 +19,9 @@
 		1B0A44701DA3CEF20055EDBB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0A446F1DA3CEF20055EDBB /* CoreGraphics.framework */; };
 		1B0A44721DA3CF550055EDBB /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0A44711DA3CF550055EDBB /* ReadMe.rtf */; };
 		1B0A44741DA3F4020055EDBB /* MapViewController.m.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0A44731DA3F4020055EDBB /* MapViewController.m.pdf */; };
+		1B0A44761DA3FF2C0055EDBB /* PlacemarkViewController.m.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0A44751DA3FF2C0055EDBB /* PlacemarkViewController.m.pdf */; };
+		1B0A44781DA3FF490055EDBB /* PlacemarkViewController.h.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0A44771DA3FF490055EDBB /* PlacemarkViewController.h.pdf */; };
+		1B0A447A1DA3FF780055EDBB /* MapViewController.h.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0A44791DA3FF780055EDBB /* MapViewController.h.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		1B0A446F1DA3CEF20055EDBB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1B0A44711DA3CF550055EDBB /* ReadMe.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
 		1B0A44731DA3F4020055EDBB /* MapViewController.m.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MapViewController.m.pdf; sourceTree = "<group>"; };
+		1B0A44751DA3FF2C0055EDBB /* PlacemarkViewController.m.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PlacemarkViewController.m.pdf; sourceTree = "<group>"; };
+		1B0A44771DA3FF490055EDBB /* PlacemarkViewController.h.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PlacemarkViewController.h.pdf; sourceTree = "<group>"; };
+		1B0A44791DA3FF780055EDBB /* MapViewController.h.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MapViewController.h.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,9 @@
 				1B0A44711DA3CF550055EDBB /* ReadMe.rtf */,
 				1B0A44561DA3CCED0055EDBB /* ViewController.swift */,
 				1B0A44581DA3CCED0055EDBB /* Main.storyboard */,
+				1B0A44771DA3FF490055EDBB /* PlacemarkViewController.h.pdf */,
+				1B0A44751DA3FF2C0055EDBB /* PlacemarkViewController.m.pdf */,
+				1B0A44791DA3FF780055EDBB /* MapViewController.h.pdf */,
 				1B0A44731DA3F4020055EDBB /* MapViewController.m.pdf */,
 				1B0A445B1DA3CCED0055EDBB /* Assets.xcassets */,
 				1B0A445D1DA3CCED0055EDBB /* LaunchScreen.storyboard */,
@@ -160,9 +169,12 @@
 			files = (
 				1B0A445F1DA3CCED0055EDBB /* LaunchScreen.storyboard in Resources */,
 				1B0A445C1DA3CCED0055EDBB /* Assets.xcassets in Resources */,
+				1B0A447A1DA3FF780055EDBB /* MapViewController.h.pdf in Resources */,
 				1B0A44721DA3CF550055EDBB /* ReadMe.rtf in Resources */,
 				1B0A44741DA3F4020055EDBB /* MapViewController.m.pdf in Resources */,
 				1B0A445A1DA3CCED0055EDBB /* Main.storyboard in Resources */,
+				1B0A44761DA3FF2C0055EDBB /* PlacemarkViewController.m.pdf in Resources */,
+				1B0A44781DA3FF490055EDBB /* PlacemarkViewController.h.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
