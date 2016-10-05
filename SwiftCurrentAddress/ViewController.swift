@@ -151,6 +151,14 @@ CLLocationManagerDelegate {
             print("\nadd annotation\n")
             print("\nmeasurementSaved=\(measurementSave)\n")
             
+          
+            let yourAnnotationAtIndex = 0
+            mapView.selectAnnotation(mapView.annotations[yourAnnotationAtIndex], animated: true)
+            
+            
+            self.locationManager.stopUpdatingLocation()
+
+            
         }
         
 
